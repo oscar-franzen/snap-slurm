@@ -20,6 +20,17 @@ The Slurm Snap is also released nightly to Github [Releases](https://github.com/
 
 Keep in mind that if you install the Slurm Snap from a Github Release, you will **not** recieve automatic updates or automatic Snap aliasing.
 
+To create the `*.snap` file from the repo:
+```bash
+# initialize lxd
+sudo lxd init
+
+git clone https://github.com/omnivector-solutions/snap-slurm
+
+cd snap-slurm
+sudo snapcraft --use-lxd
+```
+
 <!-- TODO: Re-add interfaces section when relevant -->
 <!-- ### Connect Interfaces
 Snap interfaces are used by _strictly confined_ Snaps to communicate with various parts of the system outside the Snap sandbox.
